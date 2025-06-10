@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Hero Banner/AppBar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_avatar_male"
+                android:background="@drawable/circle_bg"
+                android:contentDescription="Avatar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hero Gym Tracker"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginStart="18dp"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="Ustawienia" />
+        </LinearLayout>
+        <!-- Motivational quote -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&quot;Push harder than yesterday if you want a different tomorrow!&quot;"
+            android:textColor="@color/peach"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Compact Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/dark_card"
+            android:elevation="3dp"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+                <ImageView
+                    android:id="@+id/profilePic"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_avatar_male"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_bg"
+                    android:contentDescription="Profile Picture"
+                    android:layout_marginEnd="12dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp">
+                    <TextView
+                        android:id="@+id/characterTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Nick"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_on_dark" />
+                    <TextView
+                        android:id="@+id/levelLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Level: 1"
+                        android:textColor="@color/electric_blue"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/changePicBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Compact Badges Row -->
+        <LinearLayout
+            android:id="@+id/badgesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+            <ImageView
+                android:id="@+id/badge10"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/badge_lvl10"
+                android:contentDescription="Badge LVL 10"
+                android:layout_margin="2dp" />
+            <ImageView
+                android:id="@+id/badge20"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/badge_lvl20"
+                android:contentDescription="Badge LVL 20"
+                android:layout_margin="2dp" />
+            <ImageView
+                android:id="@+id/badge50"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/badge_lvl50"
+                android:contentDescription="Badge LVL 50"
+                android:layout_margin="2dp" />
+            <ImageView
+                android:id="@+id/badge70"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/badge_lvl70"
+                android:contentDescription="Badge LVL 70"
+                android:layout_margin="2dp" />
+            <ImageView
+                android:id="@+id/badge100"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/badge_lvl100"
+                android:contentDescription="Badge LVL 100"
+                android:layout_margin="2dp" />
+        </LinearLayout>
+
+        <!-- Statistics Card at the middle top -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statisticsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dark_card"
+            android:elevation="6dp"
+            app:cardCornerRadius="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/statisticsHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statistics"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_on_dark"
+                    android:gravity="center"/>
+
+                <TextView android:id="@+id/statTotalWorkouts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Workouts: 0" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statTotalSets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Sets: 0" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statTotalReps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Reps: 0" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statTotalWeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Weight: 0 kg" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statTotalDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Distance Run: 0 m" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statBestLift" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Best Lift: 0 kg" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+                <TextView android:id="@+id/statWorkoutStreak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Workout Streak: 0 days" android:textColor="@color/blue_accent" android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Achievements/Badges Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/badgesCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/dark_card"
+            app:cardCornerRadius="16dp"
+            android:elevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Achievements &amp; Badges"
+                    android:textColor="@color/electric_blue"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+                <!-- TODO: Dynamically add badge icons here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Achievements/Badges Section -->
+        <TextView
+            android:id="@+id/badgesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achievements"
+            android:textColor="@color/peach"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"/>
+        </HorizontalScrollView>
+
+        <!-- Stats Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/dark_card"
+            android:elevation="6dp"
+            app:cardCornerRadius="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/characterEquipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Equipment: None"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add a modern stat bar for each stat -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strength"
+                android:textColor="@color/rose"
+                android:textStyle="bold"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/strengthBar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="70"
+                android:max="100"
+                app:indicatorColor="@color/rose"
+                app:trackColor="@color/blue_dim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endurance"
+                android:textColor="@color/mint"
+                android:textStyle="bold"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/enduranceBar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="60"
+                android:max="100"
+                app:indicatorColor="@color/mint"
+                app:trackColor="@color/blue_dim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agility"
+                android:textColor="@color/electric_blue"
+                android:textStyle="bold"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/agilityBar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="50"
+                android:max="100"
+                app:indicatorColor="@color/electric_blue"
+                app:trackColor="@color/blue_dim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Energy"
+                android:textColor="@color/peach"
+                android:textStyle="bold"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/energyBar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="80"
+                android:max="100"
+                app:indicatorColor="@color/peach"
+                app:trackColor="@color/blue_dim" />
+        </LinearLayout>
+        <!-- Add a ChipGroup for badges -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/badgesChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:singleLine="true"
+            app:chipSpacing="8dp" />
+
+        <!-- Sample RPG Badge Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/sampleBadgeChips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:singleLine="true"
+            app:chipSpacing="8dp"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sword Master"
+                app:chipIcon="@drawable/ic_badge_sword"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/blue_dim"
+                android:textColor="@color/white"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shield Hero"
+                app:chipIcon="@drawable/ic_badge_shield"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/mint"
+                android:textColor="@color/white"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Legend Star"
+                app:chipIcon="@drawable/ic_badge_star"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/radical_red"
+                android:textColor="@color/white"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Champion"
+                app:chipIcon="@drawable/ic_badge_crown"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/peach"
+                android:textColor="@color/white"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dragon Slayer"
+                app:chipIcon="@drawable/ic_badge_dragon"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/radical_red"
+                android:textColor="@color/white"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potion Master"
+                app:chipIcon="@drawable/ic_badge_potion"
+                app:iconStartPadding="8dp"
+                app:chipBackgroundColor="@color/mint"
+                android:textColor="@color/white"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Workout Log Section -->
+        <TextView
+            android:id="@+id/workoutToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today:"
+            android:textColor="@color/text_on_dark"
+            android:textStyle="bold"
+            android:background="@color/dark_card"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:id="@+id/workoutWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This Week:"
+            android:textColor="@color/text_on_dark"
+            android:textStyle="bold"
+            android:background="@color/dark_card"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/characterBadges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Badges:"
+            android:textColor="@color/blue_accent"
+            android:background="@color/dark_card"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/characterMilestones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Milestones:"
+            android:textColor="@color/blue_accent"
+            android:background="@color/dark_card"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/characterMaxLifts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Max Lifts:"
+            android:textColor="@color/text_on_dark"
+            android:background="@color/dark_card"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>

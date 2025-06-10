@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_black"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Hero Banner/AppBar for Battle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/background"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/boss_helmet"
+            android:background="@drawable/circle_bg"
+            android:contentDescription="Boss Icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Battle Arena"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginStart="18dp"/>
+    </LinearLayout>
+    <!-- Motivational quote -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&quot;Champions are made when no one is watching!&quot;"
+        android:textColor="@color/peach"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/battleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battle"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_accent" />
+
+    <TextView
+        android:id="@+id/battleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PvE and PvP battles will be here."
+        android:textColor="@color/text_on_dark"
+        android:textSize="20sp"
+        android:background="@color/dark_card"
+        android:padding="16dp"
+        android:radius="12dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/bossLevelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appears at level 1"
+        android:textColor="@color/blue_accent"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- RPG Boss Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bossCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/dark_card">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+            <ImageView
+                android:id="@+id/bossAvatar"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/boss_helmet"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Boss Avatar" />
+            <TextView
+                android:id="@+id/bossName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boss Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/radical_red"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/bossHpLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP: 500/500"
+                android:textSize="16sp"
+                android:textColor="@color/success_green"
+                android:layout_marginTop="4dp"/>
+            <!-- Animated Boss HP Progress Bar -->
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/bossHpBar"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:progress="80"
+                android:max="100"
+                app:indicatorColor="@color/radical_red"
+                app:trackColor="@color/blue_dim"
+                app:trackThickness="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/bossListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boss List"
+        android:textColor="@color/peach"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:id="@+id/bossListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:background="@color/dark_card"
+        android:padding="8dp"/>
+
+    <!-- Battle Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/workoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attack (Workout)"
+            app:cornerRadius="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+    </LinearLayout>
+
+</LinearLayout>

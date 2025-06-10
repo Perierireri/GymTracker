@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="4dp"
+    android:background="@color/dark_card">
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Weight (kg)"
+        android:inputType="number"
+        android:textColor="@color/text_on_dark" />
+
+    <EditText
+        android:id="@+id/repsInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Reps"
+        android:inputType="number"
+        android:textColor="@color/text_on_dark" />
+
+</LinearLayout>

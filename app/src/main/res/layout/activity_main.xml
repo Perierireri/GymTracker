@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Epic Hero Banner for Main View -->
+    <LinearLayout
+        android:id="@+id/heroBanner"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:padding="24dp">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_badge_crown"
+            android:contentDescription="Hero Icon"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Champion!"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:shadowColor="@color/blue_dim"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Ustawienia" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/logo_gymtracker"
+        android:contentDescription="Logo aplikacji Gymtracker"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="88dp" />
+
+    <LinearLayout
+        android:id="@+id/statsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy_blue"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="56dp">
+        <TextView
+            android:id="@+id/lvlLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LVL: 1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/strLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STR: 10"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/dexLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEX: 10"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/staminaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STAMINA: 10"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/dark_card"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

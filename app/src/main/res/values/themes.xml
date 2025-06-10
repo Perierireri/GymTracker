@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MamDoscTejJebanejAplikacji" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- App Color Palette -->
+        <item name="colorPrimary">@color/pigment_indigo</item>
+        <item name="colorPrimaryDark">@color/mirage</item>
+        <item name="colorAccent">@color/radical_red</item>
+        <item name="android:colorBackground">@color/mirage</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/dodger_blue</item>
+        <item name="android:buttonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <style name="Theme.MamDoscTejJebanejAplikacji" parent="Base.Theme.MamDoscTejJebanejAplikacji" />
+
+    <!-- Button Style -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="android:background">@color/radical_red</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Removed unsupported android:cornerRadius attribute -->
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+    </style>
+</resources>

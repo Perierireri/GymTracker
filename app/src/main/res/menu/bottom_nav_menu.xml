@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_character"
+        android:icon="@drawable/ic_nav_character"
+        android:title="Character" />
+    <item
+        android:id="@+id/nav_battle"
+        android:icon="@drawable/ic_nav_battle"
+        android:title="Battle" />
+    <item
+        android:id="@+id/nav_workout_logger"
+        android:icon="@drawable/ic_nav_workout"
+        android:title="Workout Log" />
+    <item
+        android:id="@+id/navigation_your_quests"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Twoje Questy" />
+    <!-- Usunięto zakładkę Quest -->
+</menu>
